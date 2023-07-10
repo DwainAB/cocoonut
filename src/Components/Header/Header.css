@@ -1,0 +1,25 @@
+.container-header{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: end;
+    background: url("../../Assets/background-header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+}
+
+.header-btn{
+    color: var(--text-color);
+    width: 276px;
+    max-width: 276px;
+    height: 47px;
+    border: 0;
+    text-align: center;
+    font-family: var(--montserrat-font);
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 52px;
+}

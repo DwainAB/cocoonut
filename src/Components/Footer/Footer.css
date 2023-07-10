@@ -1,0 +1,128 @@
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--text-color);
+    padding-top: 72px;
+}
+
+.container-footer-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1153px;
+    margin: 0 auto;
+}
+
+.logo-footer{
+    height: 97px;
+    width: 192px;
+}
+
+.list-links{
+    display: flex;
+    flex-direction: column;
+    height: 97px;
+}
+
+.link-footer{
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+    font-family: var(--montserrat-font);
+    font-weight: 400;
+    height: 26px;
+}
+
+.link-footer-middle{
+    font-weight: 500;
+}
+
+.container-footer-mention{
+    margin-top: 70px;
+    margin-bottom: 43px;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 0.75rem;
+    font-weight: 400;
+    font-family: var(--montserrat-font);
+}
+
+.container-social-footer h2{
+    font-family: var(--dosis-font);
+    font-size: 2rem;
+    font-weight: 400;
+    color: #FFF;
+    margin-bottom: 25px;
+}
+
+.list-socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.social-footer img{
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width:990px) {
+
+    .container-footer{
+        padding-top: 130px;
+        position: relative;
+    }
+
+    .container-footer-links{
+        width: 600px;
+        flex-wrap: wrap;
+    }
+
+    .logo-footer{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .container-social-footer{
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width:650px) {
+     .container-footer-links{
+        width: 400px;
+     }
+
+    .link-footer-right{
+        margin-bottom: 20px;
+    }
+
+     .list-links:nth-child(4){
+        margin-top: 30px;
+        width: 180px;
+        line-height: 20px;
+     }
+}
+
+@media screen and (max-width:440px) {
+    .container-footer-links{
+        width: 200px;
+        border: 2px solid red;
+        text-align: center;
+    }
+
+    .list-links{
+        width: 100%;
+    }
+
+    .container-social-footer{
+        margin-top: 50px;
+    }
+
+    .list-links:nth-child(4){
+        width: 100%;
+    }
+}

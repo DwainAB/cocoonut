@@ -1,0 +1,90 @@
+.container-section-gallery{
+    margin-bottom: 80px;
+}
+
+
+.container-section-gallery h2{
+    font-size: 1.5rem;
+    font-family: var(--dosis-font);
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.container-section-gallery p {
+    font-family: var(--montserrat-font);
+    color: var(--text-color);
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.container-gallery {
+  width: 1250px;
+  max-width: 1250px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 17px;
+}
+
+.grid img {
+  width: 100%;
+  height: 100%;
+}
+
+.grid {
+  height: 200px;
+}
+
+.grid:nth-child(1) {
+  width: 300px;
+}
+
+.grid:nth-child(2) {
+  width: 195px;
+}
+
+.grid:nth-child(3) {
+  width: 400px;
+}
+
+.grid:nth-child(4) {
+  width: 300px;
+}
+
+.grid:nth-child(5) {
+  width: 400px;
+}
+
+.grid:nth-child(6) {
+  width: 300px;
+}
+
+.grid:nth-child(7) {
+  width: 300px;
+}
+
+.grid:nth-child(8) {
+  width: 195px;
+}
+
+.grid:nth-child(9) {
+  width: 300px;
+}
+
+.grid:nth-child(10) {
+  width: 400px;
+}
+
+.grid:nth-child(11) {
+  width: 195px;
+}
+
+.grid:nth-child(12) {
+  width: 300px;
+}

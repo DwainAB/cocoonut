@@ -41,15 +41,33 @@ ul{
 .container-icon-menu{
    font-size: 28px;
    display: none;
+   cursor: pointer;
 }
 
 @media screen and (max-width:900px) {
     .nav-links{
-        display: none;
+        position: absolute;
+        flex-direction: column;
+        left: 50%;
+        top: 200px;
+        transform: translateX(-50%);
+        text-align: center;
     }
 
     .nav-action-account{
-        display: none;
+        position: absolute;
+        left: 50%;
+        top: 400px;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .nav-action-account .action-account:nth-child(1){
+        width: auto;
+    }
+
+    .links{
+        line-height: 50px;
     }
 
     .container-icon-menu{
@@ -62,6 +80,16 @@ ul{
 
     .container-logo img{
         width: 200px;
+    }
+
+    .nav-open{
+        padding-bottom: 500px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .list-none{
+        display: none;
     }
 }
 

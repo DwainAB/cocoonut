@@ -37,3 +37,36 @@ ul{
 .nav-action-account .action-account:nth-child(1){
     width: 50px;
 }
+
+.container-icon-menu{
+   font-size: 28px;
+   display: none;
+}
+
+@media screen and (max-width:900px) {
+    .nav-links{
+        display: none;
+    }
+
+    .nav-action-account{
+        display: none;
+    }
+
+    .container-icon-menu{
+        display: block;
+    }
+
+    nav{
+        margin: 0 20px;
+    }
+
+    .container-logo img{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .container-logo img{
+        width: 150px;
+    }
+}

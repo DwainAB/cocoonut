@@ -35,6 +35,10 @@
     margin: 0 auto;
 }
 
+textarea{
+    resize: none;
+}
+
 .info-agency img{
     width: 22px;
     height: 22px;
@@ -134,6 +138,90 @@ form textarea:nth-child(5){
     margin-top: 36px;
 }
 
+@media screen and (max-width:1050px) {
+    .container-contactForm{
+        flex-direction: column;
+    }
 
+    .container-img-form{
+        width: 100%;
+        max-width: 1050px;
+    }
 
+    .container-form{
+        width: 100%;
+        max-width: 1050px;
+    }
+}
 
+@media screen and (max-width:460px) {
+    
+    .identity-user{
+        flex-direction: column;
+        width: 250px;
+    }
+
+    .identity-user input{
+        width: auto;
+    }
+
+    .form-contact{
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    .container-contactForm{
+        padding-bottom: 50px;
+    }
+
+    textarea{
+        width: 250px;
+    }
+
+    .info-agency{
+        font-size:0.875rem ;
+    }
+
+    .info-agency img{
+        width: 18px;
+        height: 18px;
+    }
+
+    .container-info-agency{
+        width: 340px;
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .info-agency{
+        font-size: 0.8rem;
+    }
+
+    .container-info-agency{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:300px) {
+
+    .container-form h2{
+        font-size: 1.5rem ;
+    }
+
+    .form-contact input{
+        width: 200px;
+        height: 15px;
+        font-size: 0.8rem;
+    }
+
+    .container-btn-form button{
+        width: 100px;
+        font-size: 0.7rem;
+        height: 40px;
+    }
+
+    textarea{
+        width: 200px;
+    }
+}

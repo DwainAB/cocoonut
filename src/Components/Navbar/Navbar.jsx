@@ -26,6 +26,10 @@ function Navbar(){
                     <li className="action-account"><img src={iconHeart} alt="" /></li>
                     <li className="action-account"><img src={iconBasket} alt="" /></li>
                 </ul>
+
+                <div className="container-icon-menu">
+                    <ion-icon className="icon-menu" name="menu-outline"></ion-icon>
+                </div>
             </nav>
         </div>
     )

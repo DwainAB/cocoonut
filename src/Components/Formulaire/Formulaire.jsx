@@ -34,7 +34,7 @@ function ContactForm() {
           <input type="tel" name='phone' placeholder='Téléphone' />
           <input type="email" name='email' placeholder='E-mail' />
           <input type="text" name='subject' placeholder='sujet' />
-          <textarea name="message" placeholder="Message"></textarea>
+          <textarea  name="message" placeholder="Message"></textarea>
           <div className="container-btn-form">
             <button type='submit'>S'inscrire</button>
           </div>

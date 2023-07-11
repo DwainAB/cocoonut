@@ -1,12 +1,12 @@
 .container-item-tendency{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 auto;
-    width: 1250px;
     max-width: 1250px;
     flex-wrap: wrap;
     height: auto;
+    gap: 15px;
 }
 
 .container-section-tendency h2{
@@ -79,4 +79,10 @@
     padding-left: 17px;
     padding-right: 17px;
     padding-top: 23px;
+}
+
+@media screen and (max-width:630px) {
+    .item-tendency{
+        margin-bottom: 40px;
+    }
 }

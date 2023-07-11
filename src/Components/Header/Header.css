@@ -23,3 +23,23 @@
     color: #000;
     margin-bottom: 52px;
 }
+
+
+@media screen and (max-width:1300px) {
+    .container-header{
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .container-header{
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .container-header{
+        height: 40vh;
+    }
+}
+

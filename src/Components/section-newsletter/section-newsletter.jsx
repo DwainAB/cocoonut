@@ -14,7 +14,7 @@ function SectionNewsletter(){
                 <div className="container-right-newsletter">
                     <form action="" className="form-newsletter">
                         <input type="email" placeholder="E-mail" />
-                    <button type="submit">Souscrire</button>
+                        <button type="submit">Souscrire</button>
                     </form>
                 </div>
 

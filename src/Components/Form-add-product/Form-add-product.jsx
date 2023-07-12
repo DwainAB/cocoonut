@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Form-add-product.css";
-import iconHeart from "../../Assets/icon-heart.png"
+import iconHeart from "../../Assets/icon-like.png"
 
 function FormAddProduct() {
   const [title, setTitle] = useState("");
@@ -37,35 +37,44 @@ function FormAddProduct() {
             <div className="container-form-add-product">
 
                 <form enctype="multipart/form-data" method="POST" action="http://localhost:8888/testRedcat/add_product.php">
+                    <h2 className="title-form-add">Mettez en avant vos produits</h2>
 
                     <div className="container-form-add-top">
-                        <input type="text" placeholder="Titre" name="title" value={title} onChange={handleTitleChange} />
-                        <input type="text" placeholder="Prix" name="price" value={price} onChange={handlePriceChange} />
+                        <input required type="text" placeholder="Titre" name="title" value={title} onChange={handleTitleChange} />
+                        <input required type="text" placeholder="Prix" name="price" value={price} onChange={handlePriceChange} />
                     </div>
 
-                    <input type="text" placeholder="Description" name="description" value={description} onChange={handleDescriptionChange} />
-                    <input type="file" accept="image/*" name="image" onChange={handleImageChange} />
+                    <input required type="text" placeholder="Description" name="description" value={description} onChange={handleDescriptionChange} />
+                    <input required type="file" accept="image/*" name="image" onChange={handleImageChange} />
 
                     <div className="container-btn-form-add"><button type="submit">Ajouter</button></div>
+
+                    <p className="text-form-add">* Nous tenons à vous informer que tous les champs du formulaire sont obligatoires pour assurer un ajout de produit réussi. </p>
                     
                 </form>
 
                 <div className="container-show-product">
+                  <h2>Prévisualiser votre produit</h2>
                     <div className="show-product">
                         <div className="container-img-show-product">
                             {imageURL ? <img src={imageURL} alt="Produit" /> : <p className="text-img-form">Aucune image sélectionnée</p>}
                         </div>
                         <div className="container-info-show-product">
-                            <div className="container-info-top-show">
-                                <h2>{title}</h2>
-                                <img src={iconHeart} alt="" />
-                            </div>
-                            <div className="container-info-bottom-show">
-                                <p>{description}</p>
-                                <p>{price} €</p>
-                            </div>
+                        {title && (
+                          <div className="container-info-top-show">
+                            <h2>{title}</h2>
+                            <img src={iconHeart} alt="" />
+                          </div>
+                        )}
+                        {description && price && (
+                          <div className="container-info-bottom-show">
+                            <p>{description}</p>
+                            <p>{price} €</p>
+                          </div>
+                        )}
                         </div>
                     </div>
+                    <p className="text-show-product">* Nous tenons à vous informer que tous les champs du formulaire sont obligatoires pour assurer un ajout de produit réussi. </p>
                 </div>
             </div>
 

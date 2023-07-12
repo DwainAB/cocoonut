@@ -1,5 +1,20 @@
 .container-section-gallery{
     margin-bottom: 80px;
+    position: relative;
+}
+
+.text-gallery{
+font-size: 1.25rem;
+font-family: var(--montserrat-font);
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translateY(-50%);
+transform: translateX(-50%);
+z-index: 999;
+font-weight: 500;
+background-color: rgba(209, 179, 159, 0.5);
+padding: 30px;
 }
 
 
@@ -41,6 +56,7 @@
 .grid {
   height: 200px;
   flex-grow: 1;
+  cursor: pointer;
 }
 
 .grid:nth-child(1) {

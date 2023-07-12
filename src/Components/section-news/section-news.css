@@ -52,6 +52,7 @@
     width: 615px;
     position: relative;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .news-right-item img{
@@ -72,6 +73,20 @@
     font-size: 1rem;
     font-family: var(--dosis-font);
     font-weight: 600;
+    transition: all 0.2s;
+    overflow: hidden;
+}
+
+.news-left-item{
+    cursor: pointer;
+}
+
+.description-item{
+    margin-top: 50px;
+}
+
+.all-info-item{
+    height: 200px;
 }
 
 .price-item{
@@ -130,6 +145,10 @@
     
     .info-item{
         height: 50px;
+    }
+
+    .all-info-item{
+        height: 150px;
     }
 }
 

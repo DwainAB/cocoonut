@@ -59,6 +59,7 @@ textarea{
     width: 606px;
     height: 655px;
     margin: 0 auto;
+    position: relative;
 }
 
 .container-form h2{
@@ -68,7 +69,7 @@ textarea{
     font-family: var(--dosis-font);
     font-size: 2rem;
     font-weight: 600;
-    margin-top: 70px ;
+    margin-top: 50px ;
     margin-bottom: 56px;
 }
 
@@ -129,6 +130,7 @@ form textarea:nth-child(5){
     text-align: center;
     border-radius: 10px;
     border: 0;
+    cursor: pointer;
 }
 
 .container-btn-form{
@@ -136,6 +138,18 @@ form textarea:nth-child(5){
     max-width: 146px;
     margin: 0 auto;
     margin-top: 36px;
+}
+
+.success-message{
+    margin-top: 20px;
+}
+
+.success-message p{
+    font-size: 1rem;
+    text-align: center;
+    color: var(--text-color);
+    font-family: var(--montserrat-font);
+    font-weight: 500;
 }
 
 @media screen and (max-width:1050px) {
@@ -191,6 +205,7 @@ form textarea:nth-child(5){
         width: 340px;
         padding-left: 50px;
     }
+
 }
 
 @media screen and (max-width:350px) {

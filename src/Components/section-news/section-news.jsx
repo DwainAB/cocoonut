@@ -25,6 +25,26 @@ function SectionNews() {
       });
   }, []);
 
+  const handleMouseEnter = (index) => {
+    const infoItem = document.getElementById(`info-item-${index}`);
+    infoItem.classList.add("all-info-item");
+  };
+
+  const handleMouseLeave = (index) => {
+    const infoItem = document.getElementById(`info-item-${index}`);
+    infoItem.classList.remove("all-info-item");
+  };
+
+  const handleRightItemMouseEnter = () => {
+    const infoItem = document.getElementById("info-item-right");
+    infoItem.classList.add("all-info-item");
+  };
+
+  const handleRightItemMouseLeave = () => {
+    const infoItem = document.getElementById("info-item-right");
+    infoItem.classList.remove("all-info-item");
+  };
+
   return (
     <div className="background-section-news">
       <div className="container-section-news">
@@ -32,23 +52,34 @@ function SectionNews() {
           <div className="news-left-no-img">
             <h2 className="section-news-title">nouveautés</h2>
           </div>
-          {products.map(product => (
-            <div className="news-left-item" key={product.id}>
+          {products.map((product, index) => (
+            <div
+              className="news-left-item"
+              key={product.id}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={() => handleMouseLeave(index)}
+            >
               <img className="img-item" src={`http://localhost:8888/testRedcat/${product.image}`} alt="" />
-              <div className="info-item">
+              <div id={`info-item-${index}`} className="info-item">
                 <h3 className="title-item">{product.title}</h3>
                 <p className="price-item">{product.price} €</p>
+                <p className="description-item">{product.description}</p>
               </div>
             </div>
           ))}
         </div>
         <div className="section-news-right">
           {fourthProduct && (
-            <div className="news-right-item">
+            <div
+              className="news-right-item"
+              onMouseEnter={handleRightItemMouseEnter}
+              onMouseLeave={handleRightItemMouseLeave}
+            >
               <img src={`http://localhost:8888/testRedcat/${fourthProduct.image}`} alt="" />
-              <div className="info-item">
+              <div id="info-item-right" className="info-item">
                 <h3 className="title-item">{fourthProduct.title}</h3>
                 <p className="price-item">{fourthProduct.price} €</p>
+                <p className="description-item">{fourthProduct.description}</p>
               </div>
             </div>
           )}

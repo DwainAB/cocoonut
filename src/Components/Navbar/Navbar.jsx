@@ -28,7 +28,7 @@ function Navbar(){
 
                 <ul className={`nav-action-account ${isMenuOpen ? "" : "list-none"}`}>
                     <li className="action-account"><img src={iconSearch} alt="" /></li>
-                    <li className="action-account"><img src={iconAccount} alt="" /></li>
+                    <li className="action-account"><a href="/admin"><img src={iconAccount} alt="" /></a></li>
                     <li className="action-account"><img src={iconHeart} alt="" /></li>
                     <li className="action-account"><img src={iconBasket} alt="" /></li>
                 </ul> 

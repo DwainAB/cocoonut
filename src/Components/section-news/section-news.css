@@ -11,6 +11,16 @@
     padding-bottom: 45px;
 }
 
+.img-item{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title-item{
+    text-transform: uppercase;
+}
+
 .news-left-no-img{
     width: 300px;
     max-width: 300px;

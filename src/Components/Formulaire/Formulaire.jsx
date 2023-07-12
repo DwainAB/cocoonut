@@ -1,10 +1,25 @@
 import React from 'react';
+import emailjs from 'emailjs-com';
+
 import "./Formulaire.css"
 import backgroundForm from "../../Assets/background-form.png"
 import iconTel from "../../Assets/icon-tel.png"
 import iconEmail from "../../Assets/icon-mail.png"
 import iconLocation from "../../Assets/icon-location.png"
+
+
 function ContactForm() {
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_mmuapuv', 'template_lm814q8', e.target, 'G2Lyl3lT-i8pW2UQw')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  }
+  
 
   return (
     <div className='container-contactForm'>
@@ -24,7 +39,7 @@ function ContactForm() {
       <div className="container-form">
         <h2>contactez-nous</h2>
 
-        <form className='form-contact' action="">
+        <form className='form-contact' onSubmit={sendEmail}>
           
           <div className="identity-user">
             <input type="text" name='lastname' placeholder='Nom' />

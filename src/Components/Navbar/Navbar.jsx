@@ -17,9 +17,9 @@ function Navbar(){
         <div className="container-nav">
             <nav className={isMenuOpen ? "nav-open" : ""}>
                 <ul className={`nav-links ${isMenuOpen ? "" : "list-none"}`}>
-                    <li className="links">accueil</li>
-                    <li className="links">shop</li>
-                    <li className="links">inspirations</li>
+                    <li className="links"><a href="/">accueil</a></li>
+                    <li className="links"><a href="#shop">shop</a></li>
+                    <li className="links"><a href="#gallery">inspirations</a></li>
                 </ul>
 
                 <div className="container-logo">

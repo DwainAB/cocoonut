@@ -1,132 +1,49 @@
 import React from "react";
-import './section-tendency.css'
-import img from "../../Assets/img-item.png"
-import iconHeart from "../../Assets/icon-heart.png"
+import { useState, useEffect } from "react";
+import './section-tendency.css';
+import iconLike from "../../Assets/icon-like.png"
 
-function SectionTendency(){
-    return(
-        <div className="container-section-tendency">
+function SectionTendency() {
+  const [products, setProducts] = useState([]);
 
-            <h2>tendances</h2>
+  useEffect(() => {
+    fetch('http://localhost:8888/testRedcat/get_all_product.php')
+      .then(response => response.json())
+      .then(data => {
+        if (!data.error) {
+          const limitedProducts = data.product.slice(0, 8);
+          setProducts(limitedProducts);
+        } else {
+          console.error(data.message);
+        }
+      })
+      .catch(error => {
+        console.error("Une erreur s'est produite lors de la récupération des données :", error);
+      });
+  }, []);
 
-            <div className="container-item-tendency">
-
-                <div className="item-tendency">
-                    <img src={img} alt="" />
-                    <div className="info-item-tendency">
-                        <div className="info-top-item-tendency">
-                            <h3 className="title-item-info-tendency">MAIA</h3>
-                            <img src={iconHeart} alt="" />
-                        </div>
-                        <div className="info-bottom-item-tendency">
-                            <p className="description-item-info-tendency">Plante en pot, arbre-ombrelle/tige tressé</p>
-                            <p className="price-item-info-tendency">17,99 €</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="item-tendency">
-                    <img src={img} alt="" />
-                    <div className="info-item-tendency">
-                        <div className="info-top-item-tendency">
-                            <h3 className="title-item-info-tendency">MAIA</h3>
-                            <img src={iconHeart} alt="" />
-                        </div>
-                        <div className="info-bottom-item-tendency">
-                            <p className="description-item-info-tendency">Plante en pot, arbre-ombrelle/tige tressé</p>
-                            <p className="price-item-info-tendency">17,99 €</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="item-tendency">
-                    <img src={img} alt="" />
-                    <div className="info-item-tendency">
-                        <div className="info-top-item-tendency">
-                            <h3 className="title-item-info-tendency">MAIA</h3>
-                            <img src={iconHeart} alt="" />
-                        </div>
-                        <div className="info-bottom-item-tendency">
-                            <p className="description-item-info-tendency">Plante en pot, arbre-ombrelle/tige tressé</p>
-                            <p className="price-item-info-tendency">17,99 €</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="item-tendency">
-                    <img src={img} alt="" />
-                    <div className="info-item-tendency">
-                        <div className="info-top-item-tendency">
-                            <h3 className="title-item-info-tendency">MAIA</h3>
-                            <img src={iconHeart} alt="" />
-                        </div>
-                        <div className="info-bottom-item-tendency">
-                            <p className="description-item-info-tendency">Plante en pot, arbre-ombrelle/tige tressé</p>
-                            <p className="price-item-info-tendency">17,99 €</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="item-tendency">
-                    <img src={img} alt="" />
-                    <div className="info-item-tendency">
-                        <div className="info-top-item-tendency">
-                            <h3 className="title-item-info-tendency">MAIA</h3>
-                            <img src={iconHeart} alt="" />
-                        </div>
-                        <div className="info-bottom-item-tendency">
-                            <p className="description-item-info-tendency">Plante en pot, arbre-ombrelle/tige tressé</p>
-                            <p className="price-item-info-tendency">17,99 €</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="item-tendency">
-                    <img src={img} alt="" />
-                    <div className="info-item-tendency">
-                        <div className="info-top-item-tendency">
-                            <h3 className="title-item-info-tendency">MAIA</h3>
-                            <img src={iconHeart} alt="" />
-                        </div>
-                        <div className="info-bottom-item-tendency">
-                            <p className="description-item-info-tendency">Plante en pot, arbre-ombrelle/tige tressé</p>
-                            <p className="price-item-info-tendency">17,99 €</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="item-tendency">
-                    <img src={img} alt="" />
-                    <div className="info-item-tendency">
-                        <div className="info-top-item-tendency">
-                            <h3 className="title-item-info-tendency">MAIA</h3>
-                            <img src={iconHeart} alt="" />
-                        </div>
-                        <div className="info-bottom-item-tendency">
-                            <p className="description-item-info-tendency">Plante en pot, arbre-ombrelle/tige tressé</p>
-                            <p className="price-item-info-tendency">17,99 €</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="item-tendency">
-                    <img src={img} alt="" />
-                    <div className="info-item-tendency">
-                        <div className="info-top-item-tendency">
-                            <h3 className="title-item-info-tendency">MAIA</h3>
-                            <img src={iconHeart} alt="" />
-                        </div>
-                        <div className="info-bottom-item-tendency">
-                            <p className="description-item-info-tendency">Plante en pot, arbre-ombrelle/tige tressé</p>
-                            <p className="price-item-info-tendency">17,99 €</p>
-                        </div>
-                    </div>
-                </div>
-
+  return (
+    <div id="shop" className="container-section-tendency">
+      <h2>tendances</h2>
+      <div className="container-item-tendency">
+        {products.map(product => (
+          <div className="item-tendency" key={product.id}>
+            <img src={`http://localhost:8888/testRedcat/${product.image}`} alt="" />
+            <div className="info-item-tendency">
+              <div className="info-top-item-tendency">
+                <h3 className="title-item-info-tendency">{product.title}</h3>
+                <img src={iconLike} alt="" />
+              </div>
+              <div className="info-bottom-item-tendency">
+                <p className="description-item-info-tendency">{product.description}</p>
+                <p className="price-item-info-tendency">{product.price} €</p>
+              </div>
             </div>
-
-        </div>
-    )
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
-export default SectionTendency
+export default SectionTendency;

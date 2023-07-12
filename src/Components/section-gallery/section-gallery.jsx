@@ -4,7 +4,7 @@ import img from '../../Assets/img-item.png'
 
 function SectionGallery(){
     return(
-        <div className="container-section-gallery">
+        <div id="gallery" className="container-section-gallery">
 
             <h2>gallerie</h2>
             <p>Partagez vos idées déco sur instagram avec nous : @Cocoonut</p>

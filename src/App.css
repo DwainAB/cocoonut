@@ -59,3 +59,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+a{
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+a:visited{
+	color: var(--text-color)
+}

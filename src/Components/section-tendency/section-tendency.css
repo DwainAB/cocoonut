@@ -45,7 +45,9 @@
     font-family: var(--dosis-font);
     color: var(--text-color);
     font-weight: 600;
+    text-transform: uppercase;
 }
+
 
 .info-top-item-tendency img{
     width: 30px;

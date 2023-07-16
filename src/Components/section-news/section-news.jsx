@@ -75,7 +75,7 @@ function SectionNews() {
               onMouseEnter={handleRightItemMouseEnter}
               onMouseLeave={handleRightItemMouseLeave}
             >
-              <img src={`http://localhost:8888/testRedcat/${fourthProduct.image}`} alt="" />
+              <img src={`https://test-redcat.000webhostapp.com/${fourthProduct.image}`} alt="" />
               <div id="info-item-right" className="info-item">
                 <h3 className="title-item">{fourthProduct.title}</h3>
                 <p className="price-item">{fourthProduct.price} €</p>

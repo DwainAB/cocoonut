@@ -22,12 +22,32 @@ function SectionTendency() {
       });
   }, []);
 
+  const [hoveredIndex, setHoveredIndex] = useState(-1);
+
+  const handleItemTendencyEnter = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleItemTendencyLeave = () => {
+    setHoveredIndex(-1);
+  };
+
   return (
     <div id="shop" className="container-section-tendency">
       <h2>tendances</h2>
       <div className="container-item-tendency">
-        {products.map(product => (
-          <div className="item-tendency" key={product.id}>
+        {products.map((product, index) => (
+          <div
+            className="item-tendency"
+            key={product.id}
+            onMouseEnter={() => handleItemTendencyEnter(index)}
+            onMouseLeave={handleItemTendencyLeave}
+          >
+            <div
+              className={`btn-add-product ${hoveredIndex === index ? 'active' : ''}`}
+            >
+              <p>+</p>
+            </div>
             <img src={`http://localhost:8888/testRedcat/${product.image}`} alt="" />
             <div className="info-item-tendency">
               <div className="info-top-item-tendency">

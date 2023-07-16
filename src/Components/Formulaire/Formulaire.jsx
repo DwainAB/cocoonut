@@ -63,7 +63,7 @@ function ContactForm() {
           <textarea name="message" placeholder="Message" required></textarea>
 
           <div className="container-btn-form">
-            <button type='submit'>S'inscrire</button>
+            <button className='btn-form-contact' type='submit'>S'inscrire</button>
           </div>
         </form>
       </div>

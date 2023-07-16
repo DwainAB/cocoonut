@@ -36,16 +36,17 @@ function FormAddProduct() {
         <div className="container-section-form-add">
             <div className="container-form-add-product">
 
-                <form enctype="multipart/form-data" method="POST" action="http://localhost:8888/testRedcat/add_product.php">
+                <form enctype="multipart/form-data" method="POST" action="https://test-redcat.000webhostapp.com/addProduct.php">
                     <h2 className="title-form-add">Mettez en avant vos produits</h2>
 
                     <div className="container-form-add-top">
+                      
                         <input required type="text" placeholder="Titre" name="title" value={title} onChange={handleTitleChange} />
                         <input required type="text" placeholder="Prix" name="price" value={price} onChange={handlePriceChange} />
                     </div>
 
                     <input required type="text" placeholder="Description" name="description" value={description} onChange={handleDescriptionChange} />
-                    <input required type="file" accept="image/*" name="image" onChange={handleImageChange} />
+                    <input className="input-add-img" required type="file" accept="image/*" name="image" onChange={handleImageChange} />
 
                     <div className="container-btn-form-add"><button type="submit">Ajouter</button></div>
 

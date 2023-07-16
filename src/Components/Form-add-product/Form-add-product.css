@@ -222,6 +222,11 @@
     height: 300px;
 }
 
+.input-add-img{
+    border: 2px dashed var(--text-color);
+
+}
+
 @media screen and (max-width:1015px) {
     .container-form-add-product form{
         width: 400px;

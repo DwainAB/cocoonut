@@ -122,14 +122,13 @@ form textarea:nth-child(5){
     width: 146px;
     max-width: 146px;
     height: 48px;
-    background-color: var(--secondary-color-form);
-    color: var(--secondary-color);
+    color: var(--secondary-color-form);
     font-size: 0.875rem;
     font-family: var(--montserrat-font);
+    border: 2px solid var(--secondary-color-form);
     font-weight: 500;
     text-align: center;
     border-radius: 10px;
-    border: 0;
     cursor: pointer;
 }
 
@@ -151,6 +150,55 @@ form textarea:nth-child(5){
     font-family: var(--montserrat-font);
     font-weight: 500;
 }
+
+.btn-form-contact {
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--secondary-color-form);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--secondary-color-form);
+   }
+   
+   .btn-form-contact:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--secondary-color-form);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+   }
+   
+   .btn-form-contact:hover {
+    color: #fff;
+   }
+   
+   .btn-form-contact:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+   }
+   
+   .btn-form-contact:hover:before {
+    top: -30px;
+    left: -30px;
+   }
+   
+   .btn-form-contact:active:before {
+    background: #3a0ca3;
+    transition: all 0s;
+   }
+
 
 @media screen and (max-width:1050px) {
     .container-contactForm{

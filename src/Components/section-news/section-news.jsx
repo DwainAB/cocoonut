@@ -6,7 +6,7 @@ function SectionNews() {
   const [fourthProduct, setFourthProduct] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8888/testRedcat/get_all_product.php')
+    fetch('https://test-redcat.000webhostapp.com/allProduct.php')
       .then(response => response.json())
       .then(data => {
         if (!data.error) {
